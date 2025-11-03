@@ -1,3 +1,4 @@
+/* 🌍 Global Reset */
 * {
     margin: 0;
     padding: 0;
@@ -11,6 +12,7 @@ body {
     color: #333;
 }
 
+/* 🧭 Navbar */
 #navbar {
     height: 70px;
     width: 100%;
@@ -18,31 +20,24 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0 20px;
+    padding: 0 30px;
     position: sticky;
     top: 0;
     z-index: 100;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
     transition: background 0.3s ease;
+    flex-wrap: wrap;
 }
 
 #navbar:hover {
     background: linear-gradient(90deg, #FFE797, #FCB53B);
 }
 
-/*#navbar h3:hover{
-    transform: rotate(180deg);
-}*/
-
 .log {
     display: flex;
     align-items: center;
-    gap: 20px;
+    gap: 10px;
     transition: transform 0.4s ease;
-}
-
-.log:hover {
-    transform: scale(1.05);
 }
 
 .log img {
@@ -52,32 +47,25 @@ body {
     transition: transform 0.3s ease;
 }
 
-.log img:hover {
-    transform: rotate(10deg);
-}
-
 .logo {
     font-size: 30px;
     font-weight: bold;
     color: #5a2800;
-    letter-spacing: 1px;
     text-shadow: 1px 1px 3px #fff;
     animation: slideInLeft 1s ease-out;
 }
-@keyframes slideInLeft {
-  from {
-    transform: translateX(-100%);
-    opacity: 0;
-  }
-  to {
-    transform: translateX(0);
-    opacity: 1;
-  }
+
+#navbar h3 {
+    font-size: 20px;
+    color: #4b2800;
+    text-align: center;
 }
+
 ul {
     list-style: none;
     display: flex;
-    gap: 30px;
+    gap: 25px;
+    flex-wrap: wrap;
 }
 
 ul li a {
@@ -107,6 +95,7 @@ ul li a:hover::after {
     width: 100%;
 }
 
+/* 🌄 About Section */
 .about {
     position: relative;
     height: 100vh;
@@ -114,15 +103,12 @@ ul li a:hover::after {
 }
 
 .about img {
-    margin-top: 10px;
-    margin-left: 11px;
-    margin-right: 10px;
+    margin: 10px;
     border-radius: 30px;
-    width: 98.5%;
+    width: 98%;
     height: 100%;
     object-fit: cover;
-    filter: brightness(100%);
-    transition: transform 10s ease;
+    transition: transform 8s ease;
 }
 
 .about:hover img {
@@ -135,39 +121,20 @@ ul li a:hover::after {
     left: 50%;
     transform: translate(-110%, -50%);
     color: white;
-    animation: fadeIn 2s ease;
+    text-shadow: 2px 2px 10px black;
 }
 
 .over h1 {
     font-size: 60px;
-    text-shadow: 2px 2px 10px black;
-    animation: slideUp 1s ease;
 }
 
 .over p {
     font-size: 28px;
     color: #ffd84c;
-    text-shadow: 1px 1px 5px black;
     margin-top: 10px;
-    animation: slideUp 3s ease;
 }
 
-@keyframes fadeIn {
-    from {opacity: 0;}
-    to {opacity: 1;}
-}
-
-@keyframes slideIn {
-    from {transform: translate(-150%, -50%);}
-    to {transform: translate(-120%, -50%);}
-}
-
-@keyframes slideUp {
-    from {opacity: 0; transform: translateY(20px);}
-    to {opacity: 1; transform: translateY(0);}
-}
-
-
+/* 🌅 Info / Vision */
 .info {
     position: relative;
     height: 100vh;
@@ -175,19 +142,12 @@ ul li a:hover::after {
 }
 
 .info img {
-    margin-top: 10px;
-    margin-left: 11px;
-    margin-right: 10px;
+    margin: 10px;
     border-radius: 30px;
-    width: 98.5%;
+    width: 98%;
     height: 100%;
     object-fit: cover;
     filter: brightness(60%);
-    transition: transform 5s ease;
-}
-
-.info:hover img {
-    transform: scale(1.08);
 }
 
 .vision {
@@ -197,9 +157,8 @@ ul li a:hover::after {
     transform: translate(-50%, -50%);
     text-align: center;
     color: white;
-    padding: 0 60px;
+    padding: 0 40px;
     max-width: 900px;
-    animation: fadeIn 2s ease;
 }
 
 .vision h1 {
@@ -207,40 +166,27 @@ ul li a:hover::after {
     margin-bottom: 20px;
     color: #ffd84c;
     text-shadow: 3px 3px 10px black;
-    letter-spacing: 1px;
 }
 
 .vision p {
-    font-size: 26px;
+    font-size: 24px;
     line-height: 1.6;
     text-shadow: 2px 2px 6px black;
-    transition: transform 0.4s ease, color 0.4s ease;
 }
 
-.vision p:hover {
-    transform: scale(1.03);
-    color: #ffcc66;
-}
-
-/* 🍛 MENU (HORIZONTAL SCROLL) */
+/* 🍽️ Menu */
 .menu {
     display: flex;
     overflow-x: auto;
-    scroll-behavior: smooth;
     gap: 20px;
     padding: 40px 20px;
     background-color: #fff8e1;
     cursor: grab;
-    transition: background 0.3s ease;
-}
-
-.menu:active {
-    cursor: grabbing;
 }
 
 .menu img {
-    height: 500px;
-    width: 350px;
+    height: 450px;
+    width: 320px;
     object-fit: cover;
     border-radius: 15px;
     flex-shrink: 0;
@@ -249,11 +195,11 @@ ul li a:hover::after {
 }
 
 .menu img:hover {
-    transform: scale(1.1) rotate(1deg);
+    transform: scale(1.1);
     box-shadow: 0 10px 30px rgba(0,0,0,0.3);
 }
 
-/* 📞 CONTACT */
+/* ☎️ Contact */
 .contact {
     display: flex;
     justify-content: space-between;
@@ -262,18 +208,12 @@ ul li a:hover::after {
     padding: 60px;
     flex-wrap: wrap;
     box-shadow: 0 -4px 10px rgba(0,0,0,0.15);
-    transition: all 0.4s ease;
-}
-
-.contact:hover {
-    background: linear-gradient(to right, #ffe2b3, #ffcf91);
 }
 
 .left {
     flex: 1;
     text-align: center;
     padding: 20px;
-    animation: fadeIn 2s ease;
 }
 
 .left img {
@@ -281,11 +221,6 @@ ul li a:hover::after {
     border-radius: 50%;
     margin-bottom: 15px;
     box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-    transition: transform 0.4s ease;
-}
-
-.left img:hover {
-    transform: rotate(10deg) scale(1.1);
 }
 
 .left h1 {
@@ -295,7 +230,7 @@ ul li a:hover::after {
 }
 
 .left p {
-    font-size: 25px;
+    font-size: 22px;
     color: #444;
     font-style: italic;
 }
@@ -304,12 +239,7 @@ ul li a:hover::after {
     flex: 1.5;
     display: flex;
     justify-content: center;
-    margin-left: 150px;
-    transition: transform 0.3s ease;
-}
-
-.gform:hover {
-    transform: translateX(10px);
+    margin-left: 80px;
 }
 
 .gform iframe {
@@ -319,25 +249,44 @@ ul li a:hover::after {
     border: none;
     border-radius: 15px;
     box-shadow: 0 0 15px rgba(0,0,0,0.25);
-    transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
 
-.gform iframe:hover {
-    transform: scale(1.02);
-    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
-}
+/* 🌐 RESPONSIVENESS */
 
-/* 📱 RESPONSIVE */
-@media (max-width: 768px) {
-    .contact {
+/* Tablets */
+@media (max-width: 992px) {
+    #navbar {
         flex-direction: column;
+        height: auto;
         text-align: center;
-        padding: 20px;
+        padding: 15px;
     }
 
-    .gform {
-        margin-left: 0;
-        margin-top: 30px;
+    #navbar h3 {
+        font-size: 18px;
+        margin-top: 5px;
+    }
+
+    ul {
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .about, .info {
+        height: 80vh;
+    }
+
+    .over {
+        transform: translate(-50%, -50%);
+        text-align: center;
+    }
+
+    .over h1 {
+        font-size: 40px;
+    }
+
+    .over p {
+        font-size: 22px;
     }
 
     .vision h1 {
@@ -350,6 +299,86 @@ ul li a:hover::after {
 
     .menu img {
         height: 350px;
-        width: 260px;
+        width: 250px;
+    }
+
+    .contact {
+        flex-direction: column;
+        text-align: center;
+        padding: 30px;
+    }
+
+    .gform {
+        margin: 30px 0 0 0;
+        width: 100%;
+    }
+
+    .gform iframe {
+        height: 550px;
+    }
+}
+
+/* Mobile Phones */
+@media (max-width: 600px) {
+    .logo {
+        font-size: 22px;
+    }
+
+    #navbar h3 {
+        font-size: 16px;
+    }
+
+    ul li a {
+        font-size: 16px;
+    }
+
+    .about img, .info img {
+        height: 75vh;
+    }
+
+    .over h1, .vision h1 {
+        font-size: 32px;
+    }
+
+    .over p, .vision p {
+        font-size: 16px;
+    }
+
+    .menu img {
+        height: 260px;
+        width: 180px;
+    }
+
+    .contact {
+        padding: 20px;
+    }
+
+    .left h1 {
+        font-size: 28px;
+    }
+
+    .left p {
+        font-size: 16px;
+    }
+
+    .left img {
+        width: 120px;
+    }
+
+    .gform iframe {
+        height: 450px;
+    }
+}
+
+/* Very Small Screens */
+@media (max-width: 400px) {
+    ul {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .menu img {
+        width: 160px;
+        height: 220px;
     }
 }
